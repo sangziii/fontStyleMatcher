@@ -188,7 +188,7 @@
 
   function getAllGoogleFonts() {
     var request = new XMLHttpRequest();
-    var url = 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyB4aaGXJnusy4BqQ2oGLRGJ58FQWUBJU0Q';
+    var url = 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyDlKEelhtNrGnHkVXvEsXf1ulJ85V4PjLU';
     request.open('GET', url, true);
     request.onreadystatechange = function() {
       if (request.readyState == 4 && request.status == 200) {
