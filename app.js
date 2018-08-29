@@ -1,16 +1,15 @@
 (function() {
   'use strict';
 
+  var koText = "언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다.별 아이들의 부끄러운 한 까닭입니다.<br><br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다.풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.릴케 어머니, 쉬이 하나에 부끄러운 것은 봄이 추억과 있습니다.";
+  var enText = "The fox jumped over the lazy dog, the scoundrel. <br><br>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
   var clipboard = new Clipboard('.clipboardButton');
 
 
   getAllGoogleFonts();
-  
-  console.log(changeLang);
 
-  changeLang.addEventListener('click', function(){
-    console.log("hello");
-  });
+  changeLang.addEventListener('click', langChange);
   simulateFout.addEventListener('change', fout);
   downloadFont.addEventListener('change', download);
   useColours.addEventListener('change', colour);
@@ -188,7 +187,7 @@
   }
 
   function langChange(){
-    fallbackOutput.innerHTML = enText;
+    fallbackOutput.innerHTML = (this.checked) ? enText : koText;
   }
 
   function colour() {
