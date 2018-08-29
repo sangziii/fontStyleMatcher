@@ -3,12 +3,14 @@
 
   var clipboard = new Clipboard('.clipboardButton');
 
-  // var koText = "언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러버리었습니다.별 아이들의 부끄러운 한 까닭입니다.\n\n아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다.풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.릴케 어머니, 쉬이 하나에 부끄러운 것은 봄이 추억과 있습니다.";
-  // var enText ="";
 
   getAllGoogleFonts();
   
-  changeLang.addEventListener('change', langChange);
+  console.log(changeLang);
+
+  changeLang.addEventListener('click', function(){
+    console.log("hello");
+  });
   simulateFout.addEventListener('change', fout);
   downloadFont.addEventListener('change', download);
   useColours.addEventListener('change', colour);
@@ -186,7 +188,7 @@
   }
 
   function langChange(){
-    
+    fallbackOutput.innerHTML = enText;
   }
 
   function colour() {
