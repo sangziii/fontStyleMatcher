@@ -187,7 +187,7 @@
   }
 
   function langChange(){
-    fallbackOutput.innerHTML = (this.checked) ? enText : koText;
+    fallbackOutput.innerHTML = webfontOutput.innerHTML = (this.checked) ? enText : koText;
   }
 
   function colour() {
