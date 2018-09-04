@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>FOIT vs FOUT</title>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i"> -->
+<link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+	<link rel="stylesheet" href="foitfout.css">
+	<script src="foitfout.js"></script>
+</head>
+<body>
+	<h1>FOIT vs FOUT</h1>
+	<form id="timeout" class="cf">
+		<p class="warning">Sorry—this page requires both JavaScript and support for the CSS Font Loading API.</p>
+		<fieldset>
+			<legend class="sr-only">Web fonts:</legend>
+			<div class="blind">
+				<label><!-- <input type="checkbox" checked readonly disabled> -->Roman</label>
+				<label><input type="number" id="loadtime-roman" value="4000" step="100"> ms</label>
+			</div>
+			<div class="blind"
+				<label><!-- <input type="checkbox" checked readonly disabled> -->Bold</label>
+				<label><input type="number" id="loadtime-bold" value="4000" step="100"> ms</label>
+			</div>
+			<div class="blind">
+				<label><!-- <input type="checkbox" checked readonly disabled> -->Italic</label>
+				<label><input type="number" id="loadtime-italic" value="4000" step="100"> ms</label>
+			</div>
+			<div>
+				<label><!-- <input type="checkbox" checked readonly disabled> -->Web font</label>
+				<label><input type="number" id="loadtime-bolditalic" value="4000" step="100"> ms</label>
+			</div>
+		</fieldset>
+		<div class="buttons cf">
+			<button type="button" id="randomize">Randomize Load Times</button>
+			<button type="button" id="groupedrepaints">Force a Grouped Repaint</button>
+			<button type="submit" id="startload">Start Font Load</button>
+		</div>
+	</form>
+	<div class="ff-card-pair">
+		<div class="ff-card-panel">
+			<h2 class="ff-card-label">FOIT <b>with 3s Timeout</b> <b class="ff-card-repaints blind">&#160;</b></h2>
+			<div class="ff-card ff-card-foit-roman ff-card-foit-bold ff-card-foit-italic ff-card-foit-bolditalic ff-card-start" id="card1-foit">
+				<p><span class="plain_text">Mitt Romney is Officially</span><br><strong class="-bolditalic">NOT</strong> <span class="plain_text">running for president.</span></p>
+				<p>
+                    <span class="plain_text">This is a paragraph.</span> 
+                    <strong class="-bolditalic">This is heavier text.</strong>
+                    <em class="plain_text">This is emphasized text.</em> 
+                    <strong class="-bolditalic"><em>This is heavier and emphasized text.</em></strong>
+                </p>
+			</div>
+		</div>
+
+		<div class="ff-card-panel">
+			<h2 class="ff-card-label">FOUT <b class="ff-card-repaints blind">&#160;</b></h2>
+			<div class="ff-card ff-card-fallback ff-card-start" id="card1-fout">
+				<p><span class="plain_text">Mitt Romney is Officially</span><br><strong class="-bolditalic">NOT</strong> <span class="plain_text">running for president.</span></p>
+				<p>
+                    <span class="plain_text">This is a paragraph.</span> 
+                    <strong class="-bolditalic">This is heavier text.</strong>
+                    <em class="plain_text">This is emphasized text.</em> 
+                    <strong class="-bolditalic"><em>This is heavier and emphasized text.</em></strong>
+                </p>
+			</div>
+		</div>
+	</div>
+	<!-- <p>4000ms (4 seconds) is equal to one ~40KB font loading on Fast 3G</p> -->
+
+	<script>
+	// Google Analytics
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-588046-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+</body>
+</html>
