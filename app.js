@@ -192,7 +192,7 @@
 
   function colour() {
     var shouldColour = useColours.checked;
-    fallbackOutput.style.color = shouldColour ? 'red' : 'black';
+    webfontOutput.style.color = shouldColour ? 'red' : 'black';
   }
 
   function getAllGoogleFonts() {

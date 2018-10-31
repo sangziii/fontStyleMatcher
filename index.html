@@ -48,14 +48,14 @@
     <p>
       웹폰트를 사용한다면, 최초의 폰트 렌더링과 당신이 선택한 웹폰트 렌더링 사이에 텍스트가 깜빡이는 현상을 볼 수 있습니다.
       두가지 폰트 사이의 크기 불일치로 인해 레이아웃에서 미묘한 차이를 만들기 때문에, 사이트의 layout에 미묘한 차이가 발생됩니다.
-      이러한 불일치을 최소화하기 위해서는, fallback 폰트(웹폰트 로드전 적용 폰트)와 의도한 웹폰트의 x-height와 width를 맞추어야합니다.
+      이러한 불일치을 최소화하기 위해서는, fallback 폰트(웹폰트 로드 전 적용 폰트)와 의도한 웹폰트의 x-height와 width를 맞추어야합니다.
       그럴때 이 앱을 사용하시면 됩니다.
     </p>
     <br>
     <div class="columns">
       <div>
         <div class="input-field" title="Type a different font family, like 'Arial', and tab away from the input to see a preview of it.">
-          <input value="맑은 고딕" placeholder="Fallback font name"
+          <input value="Nanum Gothic" placeholder="Fallback font name"
               id="fallbackName" data-target="fallback">
           <label>Fallback font</label>
         </div>
@@ -103,12 +103,12 @@
           <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></g></svg>
           <span>Copy CSS to clipboard</span>
         </button>
-        <p id="fallback">윤동주 별헤는 밤, 아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다.</p>
+        <p id="fallback">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</p>
       </div>
 
       <div>
         <div class="input-field" title="Type a different font family, like 'Arial', and tab away from the input to see a preview of it.">
-          <input value="Nanum Gothic" placeholder="Web font name" class="with-checkbox"
+          <input value="Black Han Sans" placeholder="Web font name" class="with-checkbox"
               id="webfontName" list="families"
               data-target="webfont">
           <datalist id="families"></datalist>
@@ -169,12 +169,12 @@
           <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></g></svg>
           <span>Copy CSS to clipboard</span>
         </button>
-        <p id="webfont">윤동주 별헤는 밤, 아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다.</p>
+        <p id="webfont">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</p>
       </div>
     </div>
 
     <h2>Overlapped</h2>
-    <p>기본 에제에서는, "Nanum Gothic" 폰트의 경우 "맑은 고딕" 보다 문자폭이 길고 넓기 때문에 맑은 고딕의 <b>font-size</b>, <b>letter-spacing</b>, <b>line-height</b>, <b>letter-spacing</b>, <b>word-spacing</b> 등의 css속성값을 
+    <p>기본 에제에서는, "Nanum Gothic" 폰트의 경우 "Black Han Sans" 보다 문자폭이 길고 넓기 때문에 "Nanum Gothic"의 <b>font-size</b>, <b>letter-spacing</b>, <b>line-height</b>, <b>letter-spacing</b>, <b>word-spacing</b> 등의 css속성값을 
     바꾸어 레아웃이 바뀌는 현상을 완화해보세요.</p>
   
     <p>
@@ -185,8 +185,8 @@
 
     <br>
     <div class="output">
-      <div id="fallbackOutput" class="output_fallback">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다.별 아이들의 부끄러운 한 까닭입니다.<br><br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다.풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.릴케 어머니, 쉬이 하나에 부끄러운 것은 봄이 추억과 있습니다.</div>
-      <div id="webfontOutput" contenteditable="true" class="overlap-font">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다.별 아이들의 부끄러운 한 까닭입니다.<br><br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다.풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.릴케 어머니, 쉬이 하나에 부끄러운 것은 봄이 추억과 있습니다.</div>
+      <div id="fallbackOutput" class="output_fallback">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</div>
+      <div id="webfontOutput" contenteditable="true" class="overlap-font">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</div>
     </div>
 
     <footer>
