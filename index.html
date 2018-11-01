@@ -52,6 +52,10 @@
       그럴때 이 앱을 사용하시면 됩니다.
     </p>
     <br>
+    <h2>Overlapped</h2>
+    <p>기본 에제에서는, "Nanum Gothic" 폰트의 경우 "Black Han Sans" 보다 문자폭이 길고 넓기 때문에 "Nanum Gothic"의 <b>font-size</b>, <b>letter-spacing</b>,
+      <b>line-height</b>, <b>letter-spacing</b>, <b>word-spacing</b> 등의 css속성값을
+      바꾸어 레아웃이 바뀌는 현상을 완화해보세요.</p>
     <div class="columns">
       <div>
         <div class="input-field" title="Type a different font family, like 'Arial', and tab away from the input to see a preview of it.">
@@ -103,7 +107,7 @@
           <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></g></svg>
           <span>Copy CSS to clipboard</span>
         </button>
-        <p id="fallback">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</p>
+        <p id="fallback" style="display:none;">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</p>
       </div>
 
       <div>
@@ -169,13 +173,16 @@
           <svg viewBox="0 0 24 24"><path d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"></path></g></svg>
           <span>Copy CSS to clipboard</span>
         </button>
-        <p id="webfont">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</p>
+        <p id="webfont" style="display:none;">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</p>
       </div>
     </div>
 
-    <h2>Overlapped</h2>
-    <p>기본 에제에서는, "Nanum Gothic" 폰트의 경우 "Black Han Sans" 보다 문자폭이 길고 넓기 때문에 "Nanum Gothic"의 <b>font-size</b>, <b>letter-spacing</b>, <b>line-height</b>, <b>letter-spacing</b>, <b>word-spacing</b> 등의 css속성값을 
-    바꾸어 레아웃이 바뀌는 현상을 완화해보세요.</p>
+    <div class="output">
+      <div id="fallbackOutput" class="output_fallback">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운
+        이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</div>
+      <div id="webfontOutput" contenteditable="true" class="overlap-font">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의
+        부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</div>
+    </div>
   
     <p>
       <label><input type="checkbox" id="useColours">적용될 webfont 색상 변경</label><br>
@@ -184,10 +191,6 @@
     </p>
 
     <br>
-    <div class="output">
-      <div id="fallbackOutput" class="output_fallback">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</div>
-      <div id="webfontOutput" contenteditable="true" class="overlap-font">언덕 이제 지나가는 부끄러운 이웃 쓸쓸함과 당신은 불러 버리었습니다. 별 아이들의 부끄러운 한 까닭입니다.<br>아름다운 이네들은 파란 지나고 라이너 책상을 노루, 계십니다. 풀이 별 것은 이런 강아지, 내일 멀듯이, 언덕 있습니다.</div>
-    </div>
 
     <footer>
       customed ✨ by Sangziii<br>

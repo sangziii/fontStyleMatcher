@@ -187,6 +187,7 @@ h2 {
 .output {
   position: relative;
   min-height: 20px;
+  border: 1px solid #ccc;
 }
 
 .overlap-font {
